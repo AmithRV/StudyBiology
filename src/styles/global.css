@@ -1,0 +1,15 @@
+@import "tailwindcss";
+body {
+        font-family: 'Inter', sans-serif;
+      }
+      html
+      {
+        scroll-behavior: smooth;
+      }
+
+ 
+ 
+
+      .gradient-overlay-programs {
+    background-image: linear-gradient(to top right, #b0dfd2, #bae5e5, #cbeaf2, #deeef9, #eff4fc, #eff4fc, #eff4fc, #eff4fc, #deeef9, #cbeaf2, #bae5e5, #b0dfd2);
+}

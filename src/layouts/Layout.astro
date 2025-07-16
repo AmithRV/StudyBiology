@@ -1,0 +1,70 @@
+---
+import Leniis from "../components/utilities/Leniis.astro";
+import AOSInitializer from "../components/utilities/AOSInitializer.astro";
+import "../styles/global.css";
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content="{title}" />
+    <meta
+      name="description"
+      content="Your compelling course/platform description here."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://YOUR_SITE_URL.com/" />
+    <meta property="og:title" content="{title}" />
+    <meta
+      property="og:description"
+      content="Your compelling course/platform description here."
+    />
+    <meta
+      property="og:image"
+      content="https://YOUR_SITE_URL.com/og-image.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://YOUR_SITE_URL.com/" />
+    <meta property="twitter:title" content="{title}" />
+    <meta
+      property="twitter:description"
+      content="Your compelling course/platform description here."
+    />
+    <meta
+      property="twitter:image"
+      content="https://YOUR_SITE_URL.com/og-image.jpg"
+    />
+
+    <!-- Fonts and Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-...your-key..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body class="bg-gradient-to-b from-[#EFFFFC]/40 to-[#EBFFFA]/40">
+    <Leniis />
+    <AOSInitializer />
+    <slot />
+  </body>
+</html>
