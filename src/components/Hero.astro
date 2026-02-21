@@ -37,14 +37,14 @@
         class="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight hero-title"
       >
         25K+ STUDENTS TRUST OUR<br />
-        <span class="text-[#FE3E57]">BIOLOGY</span> ONLINE CLASSES
+        <span class="text-yellow-300">BIOLOGY</span> ONLINE CLASSES
       </h1>
       <p
         class="mt-5 text-white/90 text-base md:text-xl leading-relaxed font-medium hero-subtitle"
       >
-        Join our engaging, live online sessions led by an expert biology tutor.
-        Learn interactively — not through pre-recorded videos — and explore
-        topics further through our active YouTube channel.
+        Join our dynamic online institute backed by 53,000 YouTube subscribers,
+        dedicated to delivering clear, exam-focused, and result-oriented
+        learning.
       </p>
 
       <div class="mt-8 flex flex-wrap gap-6 hero-buttons">
@@ -131,52 +131,52 @@
 </section>
 
 <script is:inline>
-  const menuBtn = document.getElementById("menuBtn");
-  const sidebar = document.getElementById("sidebar");
-  const closeBtn = document.getElementById("closeBtn");
-  const overlay = document.getElementById("overlay");
+  const menuBtn = document.getElementById('menuBtn');
+  const sidebar = document.getElementById('sidebar');
+  const closeBtn = document.getElementById('closeBtn');
+  const overlay = document.getElementById('overlay');
 
-  menuBtn.addEventListener("click", () => {
-    sidebar.classList.remove("translate-x-full");
-    overlay.classList.remove("hidden");
+  menuBtn.addEventListener('click', () => {
+    sidebar.classList.remove('translate-x-full');
+    overlay.classList.remove('hidden');
   });
 
-  closeBtn.addEventListener("click", () => {
-    sidebar.classList.add("translate-x-full");
-    overlay.classList.add("hidden");
+  closeBtn.addEventListener('click', () => {
+    sidebar.classList.add('translate-x-full');
+    overlay.classList.add('hidden');
   });
 
-  overlay.addEventListener("click", () => {
-    sidebar.classList.add("translate-x-full");
-    overlay.classList.add("hidden");
+  overlay.addEventListener('click', () => {
+    sidebar.classList.add('translate-x-full');
+    overlay.classList.add('hidden');
   });
 </script>
 
 <!-- 🔁 Carousel Script -->
 <script>
-  const slides = document.querySelectorAll(".carousel-slide");
+  const slides = document.querySelectorAll('.carousel-slide');
   let current = 0;
   setInterval(() => {
-    slides[current].classList.remove("active");
+    slides[current].classList.remove('active');
     current = (current + 1) % slides.length;
-    slides[current].classList.add("active");
+    slides[current].classList.add('active');
   }, 4000);
 </script>
 
 <!-- Hero Animation Script -->
 <script is:inline>
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener('DOMContentLoaded', function () {
     // Trigger hero animations after a brief delay
     setTimeout(() => {
-      document.querySelector(".hero-title").classList.add("animate-in");
+      document.querySelector('.hero-title').classList.add('animate-in');
     }, 300);
 
     setTimeout(() => {
-      document.querySelector(".hero-subtitle").classList.add("animate-in");
+      document.querySelector('.hero-subtitle').classList.add('animate-in');
     }, 600);
 
     setTimeout(() => {
-      document.querySelector(".hero-buttons").classList.add("animate-in");
+      document.querySelector('.hero-buttons').classList.add('animate-in');
     }, 900);
   });
 </script>
