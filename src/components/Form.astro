@@ -32,7 +32,7 @@
         and we’ll assist you right away.
       </p>
 
-      <form class="space-y-6">
+      <form class="space-y-6" id="contactForm">
         <div>
           <label
             for="name"
@@ -93,3 +93,38 @@
     </div>
   </div>
 </section>
+
+<script is:inline>
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const res = await fetch(
+        'http://localhost:3000/api/messages/send-message',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        },
+      );
+
+      const result = await res.json();
+
+      form.reset();
+    } catch (error) {
+      // responseMessage.textContent = 'Something went wrong!';
+    }
+  });
+</script>
