@@ -67,7 +67,7 @@
           />
         </div>
 
-        <div>
+        <div class="relative">
           <label
             for="message"
             class="block text-sm font-medium text-gray-700 mb-1"
@@ -79,8 +79,16 @@
             name="message"
             rows="4"
             required
-            class="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#004BB8]"
+            maxlength="256"
+            oninput="updateCount(this)"
+            class="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#004BB8] resize-none"
             placeholder="Type your message here..."></textarea>
+          <span
+            id="charCount"
+            class="absolute bottom-2 right-3 text-xs text-gray-500"
+          >
+            0/256
+          </span>
         </div>
 
         <button
@@ -149,4 +157,15 @@
       }
     }
   });
+</script>
+
+<script is:inline>
+  function updateCount(textarea) {
+    if (textarea.value.length > 256) {
+      textarea.value = textarea.value.substring(0, 256);
+    }
+
+    document.getElementById('charCount').textContent =
+      textarea.value.length + '/256';
+  }
 </script>
